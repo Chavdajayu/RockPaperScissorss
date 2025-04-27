@@ -1,0 +1,104 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.mode-selection, .game {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 20px;
+    border-radius: 25px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 90%;
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+input, button {
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input {
+    width: 80%;
+    background: #ffffff;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    transform: translateY(-3px) scale(1.05);
+}
+
+.choices {
+    margin-top: 20px;
+}
+
+.choices button {
+    margin: 10px;
+    font-size: 18px;
+    width: 140px;
+}
+
+#scoreboard {
+    margin-top: 15px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.chat {
+    margin-top: 30px;
+}
+
+#messages {
+    max-height: 200px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 15px;
+    border-radius: 15px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+
+#chatInput {
+    width: 70%;
+}
+
+#sendBtn {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+#sendBtn:hover {
+    background: linear-gradient(135deg, #f5576c, #f093fb);
+    transform: translateY(-2px) scale(1.03);
+}
