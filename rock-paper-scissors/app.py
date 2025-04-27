@@ -90,5 +90,4 @@ def determine_winner(p1, c1, p2, c2):
         return {'winner': p2, 'message': f'{p2} wins the round!'}
 
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+    app.run(debug=True)
