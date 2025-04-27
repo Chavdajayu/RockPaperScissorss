@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Play with Computer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="game">
+    <h2>Playing against Computer</h2>
+    <h3 id="info"></h3>
+
+    <div class="choices">
+        <button onclick="makeChoice('rock')">🪨 Rock</button>
+        <button onclick="makeChoice('paper')">📄 Paper</button>
+        <button onclick="makeChoice('scissors')">✂️ Scissors</button>
+    </div>
+
+    <h3 id="result"></h3>
+</div>
+
+<script>
+    const username = "{{ username }}";
+
+    function makeChoice(playerChoice) {
+        const choices = ['rock', 'paper', 'scissors'];
+        const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+        document.getElementById('info').textContent = `${username} chose ${playerChoice} | Computer chose ${computerChoice}`;
+
+        let result = '';
+        if (playerChoice === computerChoice) {
+            result = "It's a Draw!";
+        } else if ((playerChoice === 'rock' && computerChoice === 'scissors') ||
+                   (playerChoice === 'scissors' && computerChoice === 'paper') ||
+                   (playerChoice === 'paper' && computerChoice === 'rock')) {
+            result = `${username} wins! 🎉`;
+        } else {
+            result = "Computer wins! 🤖";
+        }
+
+        document.getElementById('result').textContent = result;
+    }
+</script>
+
+</body>
+</html>
